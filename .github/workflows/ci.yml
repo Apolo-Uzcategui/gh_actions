@@ -27,8 +27,9 @@ jobs:
       run: npm install
 
     - name: Run ESLint
-      run: npm run lint  # Change this to your ESLint command if different
-      run: echo "Lint done successfully."
+      run: | 
+        npm run lint  # Change this to your ESLint command if different
+        echo "Lint done successfully."
 
   test:
     needs: lint
@@ -46,7 +47,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run Testing
-      run: npm run test  # Change this to your ESLint command if different
-      run: echo "Testing done successfully."
+    - name: |
+        npm run test  # Change this to your ESLint command if different
+        echo "Testing done successfully."
 
